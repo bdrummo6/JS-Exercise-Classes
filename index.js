@@ -72,7 +72,6 @@ class Person {
     - A car which runs out of `fuel` while driving can't drive any more distance:
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
-
 class Car {
   constructor(model, milesPerGallon) {
     this.model = model;
@@ -86,9 +85,7 @@ class Car {
   drive(distance) {
     this.odometer += distance;
     let fuel = distance/this.milesPerGallon;
-    if(fuel >= this.tank) {
-      this.tank = 0;
-    }
+    this.tank -= fuel;
   }
 }
 
