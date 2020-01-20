@@ -55,7 +55,7 @@ class Person {
     this.stomach.length = 0;
   }
   toString() {
-    return this.name + ", " + this.age;
+    return `${this.name}, ${this.age}`;
   }
 }
 
@@ -89,7 +89,7 @@ class Car {
       this.tank -= fuelUsed;
       this.tank = 0;
       this.odometer += distance - 1;
-      return "I ran out of fuel at " + this.odometer + " miles!";
+	  return `I ran out of fuel at ${this.odometer} miles!`;
     } else {
       this.odometer += distance;
       this.tank -= fuelUsed;
@@ -116,7 +116,7 @@ class Lambdasian {
     this.location = attributes.location;
   }
   speak() {
-    return "Hello my name is " + this.name + ", I am from " + this.location;
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
   }
 }
 
@@ -145,10 +145,10 @@ class Instructor extends Lambdasian {
     this.catchPhrase = instructAtts.catchPhrase;
   }
   demo(subject) {
-    return "Today we are learning about " + subject;
+    return `Today we are learning about ${subject}`;
   }
   grade(student, subject) {
-    return student.name + " receives a perfect score on " + subject;
+    return `${student.name} receives a perfect score on ${subject}`;
   }
 }
 
@@ -181,10 +181,10 @@ class Student extends Lambdasian {
     return this.favSubjects.toString();
   }
   PRAssignment(subject) {
-    return this.name + " has submitted a PR for " + subject;
+    return `${this.name} has submitted a PR for ${subject}`;
   }
   sprintChallenge(subject) {
-    return this.name + " has begun sprint challenge on " + subject;
+    return `${this.name} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -211,10 +211,10 @@ class ProjectManager extends Instructor {
 
   }
   standUp(slack_channel) {
-    return this.name + " announces to " + slack_channel + "@channel standy times!";
+    return `${this.name} announces to ${slack_channel} @channel standy times!`;
   }
   debugsCode(student, subject) {
-    return this.name + " debugs " + student.name + "'s code on " + subject;
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
 }
 
