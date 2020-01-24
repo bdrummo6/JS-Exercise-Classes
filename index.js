@@ -89,7 +89,9 @@ class Car {
       this.tank -= fuelUsed;
       this.tank = 0;
       this.odometer += distance - 1;
+	  
 	  return `I ran out of fuel at ${this.odometer} miles!`;
+	  
     } else {
       this.odometer += distance;
       this.tank -= fuelUsed;
@@ -171,11 +173,10 @@ class Student extends Lambdasian {
   constructor (studentAtts) {
     super(studentAtts);
     this.isStudent = studentAtts.isStudent;
-
+	
     this.previousBackground = studentAtts.previousBackground;
     this.className = studentAtts.className;
     this.favSubjects = studentAtts.favSubjects;
-
   }
   listSubjects() {
     return this.favSubjects.toString();
@@ -208,7 +209,6 @@ class ProjectManager extends Instructor {
 
     this.gradClassName = pmAttributes.gradClassName;
     this.favInstructor = pmAttributes.favInstructor;
-
   }
   standUp(slack_channel) {
     return `${this.name} announces to ${slack_channel} @channel standy times!`;
